@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <title>Health Insurance Premium Prediction</title>
+</head>
+
+<body>
+    <div class="alert alert-success alert-dismissible fade show text-center mb-0" role="alert">
+        <strong>Know your medical premium cost in few seconds.</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+      <div class="container">
+        <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+            <h2 class="fw-normal">Welcome to Health Insurance Premium Predictor</h2>
+            <p class=" text-muted"><b></b>
+            </p>
+            <p class="text-danger"><b>{{prediction_text}}</b></p>
+        </div>
+        <div class="container">
+            <form action="{{url_for('home')}}" method="POST">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Age:</label>
+                    <input type="text" class="form-control" id="Age" name="Age" placeholder="Enter age">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Height:</label>
+                    <input type="text" class="form-control" id="Height" name="Height" placeholder="Enter height">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Weight:</label>
+                    <input type="text" class="form-control" id="Weight" name="Weight" placeholder="Enter weight">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1"  class="form-label">Diabetic?</label>
+                    <select class="form-select" id="Diabetes" name="Diabetes" aria-label="Default select example">
+                        <option selected>-- select --</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1"  class="form-label">Blood Pressure problems?</label>
+                    <select class="form-select" id="BloodPressureProblems" name="BloodPressureProblems" aria-label="Default select example">
+                        <option selected>-- select --</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1"  class="form-label">Any Transplants?</label>
+                    <select class="form-select" id="AnyTransplants" name="AnyTransplants" aria-label="Default select example">
+                        <option selected>-- select --</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1"  class="form-label">Any chronic diseases?</label>
+                    <select class="form-select" id="AnyChronicDiseases" name="AnyChronicDiseases" aria-label="Default select example">
+                        <option selected>-- select --</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Number of major surgeries:</label>
+                    <input type="text" class="form-control" id="NumberOfMajorSurgeries" name="NumberOfMajorSurgeries" placeholder="Enter">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1"  class="form-label">Any known allergies?</label>
+                    <select class="form-select" id="KnownAllergies" name="KnownAllergies" aria-label="Default select example">
+                        <option selected>-- select --</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1"  class="form-label">Any cancer patients in your family?</label>
+                    <select class="form-select" id="HistoryOfCancerInFamily" name="HistoryOfCancerInFamily" aria-label="Default select example">
+                        <option selected>--select --</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                </div>
+                <div class="text-center"><button type="submit" class="btn btn-primary">Predict</button></div>
+            </form>
+        </div><br><br>
+        <br> <br> <br> <br> </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
